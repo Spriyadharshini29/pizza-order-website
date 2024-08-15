@@ -1,0 +1,242 @@
+<html>
+<head>
+<title>
+Pizza
+</title>
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+   @import url('https://fonts.googleapis.com/css?family=Delius');
+   @import url('https://fonts.googleapis.com/css?family=Handlee');
+   @import url('https://fonts.googleapis.com/css?family=Unlock');
+label,.tb1{
+    font-family: Delius, cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(84, 84, 84, 0.674);
+}
+.h22{
+ 
+
+    font-family: Handlee, cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    word-spacing: 2px;
+    color: rgb(0, 0, 0);
+}
+.h222{
+  font-size: 40px;
+}
+.topic{
+  
+    font-family: Unlock, cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+    word-spacing: 2px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.545);
+}
+.b1{
+ background: linear-gradient(to right,#1c1c1c ,#9d9c9e);
+ background-color: #1c1c1c;
+ color: #ebe3e3;
+ font-family: Trebuchet MS;
+ font-size: 19px;
+ font-weight: 800;
+ font-style: italic;
+ text-decoration: none;
+ padding: 19px 25px;
+ border: 0px solid #000;
+ border-radius: 43px;
+ display: inline-block;
+ box-shadow: 5px 0px 6px -2px rgba(26.620641946792603,25.88118005540067,25.88118005540067,0.5);
+}
+.b1:hover{
+ background: linear-gradient(to right,#1b1b1b ,#959496);
+ background-color: #1b1b1b;
+}
+.b1:active{
+ transform: scale(0.95);
+}
+.b2{
+ background: linear-gradient(to right,#707376 ,#585858);
+ background-color: #707376;
+ color: #000000;
+ font-family: Trebuchet MS;
+ font-size: 19px;
+ font-weight: 800;
+ font-style: italic;
+ text-decoration: none;
+ padding: 19px 25px;
+ border: 0px solid #000;
+ border-radius: 12px;
+ display: inline-block;
+ box-shadow: 5px 0px 6px -2px rgba(26.620641946792603,25.88118005540067,25.88118005540067,0.5);
+}
+.b2:hover{
+ background: linear-gradient(to right,#6a6d70 ,#535353);
+ background-color: #6a6d70;
+}
+.b2:active{
+ transform: scale(0.95);
+}
+  .t{
+        font-family: "Fredericka the Great", cursive;
+        text-align: center;
+        font-size: 56px;
+        letter-spacing: 20px;
+        word-spacing: 2px;
+        color: rgba(255, 255, 255, 0.737);
+        text-shadow: rgb(12, 12, 12) 2px 2px 2px;
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0.453);
+      }
+  
+  table td,tr{
+        padding-left:30px;
+        padding-right:30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      body {
+        height: 100%;
+        width:100%;
+        background: url(giphy.gif) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      h5{
+        background-color: black;
+        color:rgb(200, 197, 197);
+        width:100%;
+        height:30px;
+        font-size: x-large;
+        letter-spacing: 5px;
+        word-spacing: 5px;
+      }
+  #pz{
+    background-color: rgb(128, 126, 126);
+    opacity: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  form{
+    background-color: rgba(158, 156, 156, 0.723);
+  }
+  </style>
+  <script type="text/javascript">
+    function order(){
+      alert("order submitted");
+    }
+  </script>
+
+</head>
+<body>
+  <h1 class="t">Pizza Corner</h1>
+  <hr align="center">
+  <div align="center">
+    <h5><marquee direction="right" scrollamount="6">50% discount on order for more than RS.600/-</marquee></h5>
+    <h1 class="topic">MENU</h1>
+    <table>
+      <tr>
+        <td><img src="p1.jpg"></td>
+        <td><img src="p2.jpg"></td>
+        <td><img src="p3.jpg"></td>
+      </tr>
+      <tr id="pz">
+        <td>ITALLIAN PIZZA</td>
+        <td>GREEK PIZZA</td>
+        <td>CAUCASIAN PIZZA</td>
+      </tr>
+      <tr>
+        <td><img src="p4.jpg"></td>
+        <td><img src="p5.jpg"></td>
+        <td><img src="p6.jpg"></td>
+      </tr>
+      <tr id="pz">
+        <td>AMERICAN PIZZA</td>
+        <td>TOMATAOE PIZZA</td>
+        <td>MARGHERITA PIZZA</td>
+      </tr>
+    </table>
+  </div>
+  <hr align="center">
+  <BR>
+  <form align="center">
+    <br><br>
+    <h2 class="h222">PLACE YOUR ORDER BY FILLING UP THE FORM</h2>
+    <BR>
+    <table align="center" class="tb1">
+      <tr>
+        <td>NAME</td>
+        <td><input type="text" id="a" placeholder="Enter Your Name" required></td>
+      </tr>
+      <tr>
+        <td>PHONE NUMBER</td>
+        <td><input type="number" id="b" placeholder="Enter Your Number" required></td>
+      </tr>
+      <tr>
+        <td>EMAIL</td>
+        <td><input type="email" id="c" required></td>
+      </tr>
+      <tr>
+        <td>ADDRESS</td>
+        <td><textarea id="d" placeholder="Enter Your Address" required></textarea></td>
+      </tr>
+      <tr>
+        <td>LANDMARK</td>
+        <td><textarea id="e" placeholder="Enter Your Landmark"></textarea></td>
+      </tr>
+    </table>
+    <fieldset width="500">
+      <legend><h2 class="h22">Select Pizza Size</h2></legend>
+      <p><label> <input type="radio" id="f" value="Small" > Small </label></p>
+      <p><label> <input type="radio" id="g" value="Medium"> Medium </label></p>
+      <p><label> <input type="radio" id="h" value="Large"> Large </label></p>
+    </fieldset>
+    <fieldset width="500">
+      <legend><h2 class="h22">Select Pizza</h2> </legend>
+      <p><label> <input type="checkbox" id="i" value="Itallian">Itallian Pizza</label></p>
+      <p><label> <input type="checkbox" id="j" value="Greek">Greek Pizza</label></p>
+      <p><label> <input type="checkbox" id="k" value="Caucasian">Caucasian Pizza</label></p>
+      <p><label> <input type="checkbox" id="l" value="American">American Pizza</label></p>
+      <p><label> <input type="checkbox" id="m" value="Tomataoe">Tomataoe Pizza</label></p>
+      <p><label> <input type="checkbox" id="n" value="Margherita">Margherita Pizza</label></p>
+    </fieldset>
+    <fieldset width="500">
+      <legend><h2 class="h22">Select Cold Drink</h2> </legend>
+      <p><label> <input type="checkbox" id="o" value="Coke">Coke</label></p>
+      <p><label> <input type="checkbox" id="p" value="Pepsi">Pepsi</label></p>
+      <p><label> <input type="checkbox" id="q" value="7up">7up</label></p>
+      <p><label> <input type="checkbox" id="r" value="Fanta">Fanta</label></p>
+      <p><label> <input type="checkbox" id="s" value="Miranda">Miranda</label></p>
+      <p><label> <input type="checkbox" id="t" value="ThumbsUp">Thumbs Up</label></p>
+    </fieldset>
+    <br><br>
+    <table align="center" class="tb1">
+      <tr>
+        <td>PREFERRED DELIVERY TIME</td>
+        <td><input type="time" min="11:00" max="21:00" step="60"></td>
+      </tr>
+      <tr>
+        <td>NO Of PIECES</td>
+        <td><input type="number" id="u"></td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <div align="center">
+    <input type="submit" value="SUBMIT ORDER" onclick="order()" class="b1">         <input type="reset" value="RESET" class="b1">
+    </div>
+    <br><br>
+  </form>
+  <center><a href="mainpage.html"><input type="button" value="BACK TO HOME PAGE" class="b2"></a></center>
+  <br><br>
+</body>
+</html>
