@@ -1,92 +1,26 @@
-<html>
-  <head>
-    <title>
-      RESERVATION
-    </title>
-    <style>
-        table td,tr{
-          padding-block: 20px;
-          padding-left: 20px;
-          padding-right: 20px;
-          border: 0px;
-          font-size: 20px;
-          font-weight: bolder;
-        }
-        body{
-          height: 100%;
-        width:100%;
-        background: url(bg5.jpg) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        opacity:initial;
-        }
-        form{
-          background-color: rgba(105, 105, 105, 0.847);
-        }
-        h1,p{
-          background-color: rgba(0, 0, 0, 0.759);
-          color: white;
-        }
-        .b2{
- background: linear-gradient(to right,#707376 ,#585858);
- background-color: #707376;
- color: #000000;
- font-family: Trebuchet MS;
- font-size: 19px;
- font-weight: 800;
- font-style: italic;
- text-decoration: none;
- padding: 19px 25px;
- border: 0px solid #000;
- border-radius: 12px;
- display: inline-block;
- box-shadow: 5px 0px 6px -2px rgba(26.620641946792603,25.88118005540067,25.88118005540067,0.5);
-}
-.b2:hover{
- background: linear-gradient(to right,#6a6d70 ,#535353);
- background-color: #6a6d70;
-}
-.b2:active{
- transform: scale(0.95);
-}
+>> % Given data
+P = 50; % Pressure in atm
+T = 223; % Temperature in K
+R = 0.0821; % Universal gas constant in L·atm/(mol·K)
+a = 1.33; % Van der Waals constant in atm·L^2/mol^2
+b = 0.0366; % Van der Waals constant in L/mol
 
-    </style>
-    <script>
-      function order(){
-      alert("your reservation has been confirmed");
-    }
-      </script>
-  </head>
-  <body align="center">
-    <h1>WELCOME TO RESERVATION PAGE!!</h1>
-    <p style="font-size:30px;">Fill up the below form to make your reservation</p>
-    <form>
-      <table align="center">
-        <tr>
-          <td>NAME:</td>
-          <td><input type="text" id="r1" placeholder="Enter Your Name" required></td>
-        </tr>
-        <tr>
-          <td>NO OF PERSONS:</td>
-          <td><input type="number" id="r2" required></td>
-        </tr>
-        <tr>
-          <td>TIMING:</td>
-          <td><input type="time" id="r3" min="10:00" max="21:00" step="60" required></td>
-        </tr>
-        <tr>
-          <td>CONTACT NUMBER:</h5></td>
-          <td><input type="number" id="r4" placeholder="Enter Your Number" required></td>
-        </tr>
-      </table>
-      <br><br>
-      <input type="submit" value="SUBMIT ORDER" onclick="order()" class="b2">
-      <br>
-      <br>
-      <a href="mainpage.html" align="center"><input type="button" class="b2" value="BACK TO HOME PAGE"></a>
-      <br><br>
-    </form>
-  </body>
-</html>
+% Coefficients of the cubic equation
+A = P;
+B = -(P * b + R * T);
+C = a - 2 * b * R * T - P * b^2;
+D = -(a * b);
+
+% Define the cubic equation
+coefficients = [A, B, C, D];
+
+% Solve the cubic equation
+roots_of_equation = roots(coefficients);
+
+% Filter out the real root (physical solution)
+real_root = roots_of_equation(imag(roots_of_equation) == 0);
+
+% Display result
+fprintf('The specific molar volume (Vm) is: %.4f L/mol\n', real_root);
+The specific molar volume (Vm) is: 0.4122 L/mol
+>> 
